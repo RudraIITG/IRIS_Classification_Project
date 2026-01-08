@@ -71,6 +71,12 @@
 <div class="card">
     <h1>Prediction Result</h1>
     <p>The predicted species is: <strong>{{ prediction }}</strong></p>
+    <img
+    src="{{ url_for('static', filename=prediction ~ '.jpeg') }}"
+    alt="{{ prediction }}"
+    style="width: 260px; max-width: 100%; border-radius: 16px; margin: 10px 0 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.35);"
+    />
+
     <h1>Probabilities</h1>
     <p>Setosa : <strong>{{ setosa }}</strong></p>
     <p>versicolor : <strong>{{ versicolor }}</strong></p>
