@@ -81,22 +81,29 @@
 <body>
 
 <div class="card">
-    <h1>Enter Iris Details</h1>
-    <form action="/predict" method="POST">
-        <label>Sepal Length:</label>
-        <input type="number" step="0.1" name="sepal_length" required>
+  <h1>Enter Iris Details</h1>
 
-        <label>Sepal Width:</label>
-        <input type="number" step="0.1" name="sepal_width" required>
+  <form action="/predict" method="POST">
+    <label>Sepal Length:</label>
+    <input type="number" step="0.1" name="sepal_length" required>
 
-        <label>Petal Length:</label>
-        <input type="number" step="0.1" name="petal_length" required>
+    <label>Sepal Width:</label>
+    <input type="number" step="0.1" name="sepal_width" required>
 
-        <label>Petal Width:</label>
-        <input type="number" step="0.1" name="petal_width" required>
+    <label>Petal Length:</label>
+    <input type="number" step="0.1" name="petal_length" required>
 
-        <input type="submit" value="Predict">
-    </form>
+    <label>Petal Width:</label>
+    <input type="number" step="0.1" name="petal_width" required>
+
+    <div class="btn-row">
+      <button type="submit" name="action" value="Random Forest">Random Forest</button>
+      <button type="submit"  name="action" value = "Logistic Regression">Logistic Regression</button>
+      <button type="submit"  name="action" value="K Nearest Neighbours">K Nearest Neighbours</button>
+
+      <a href="/" class="btn">Home</a>
+    </div>
+  </form>
 </div>
 
 </body>

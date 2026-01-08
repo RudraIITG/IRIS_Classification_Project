@@ -5,12 +5,15 @@ import joblib
 
 app = Flask(__name__)
 
-iris_model = joblib.load("iris_pipeline.joblib")
+RandomForest_model = joblib.load("RandomForest_pipeline.joblib")
+Logistic_model = joblib.load("Logistic_pipeline.joblib")
+KNeighbours_model =joblib.load("KNeighbours_pipeline.joblib")
 
 @app.route("/")
 def index():
     return render_template("index.html")
 
+@app.route("/selection", methods =  ["GET"])
 
 
 @app.route("/predict", methods = ["POST"])
@@ -20,11 +23,24 @@ def predict():
     petal_length = float(request.form.get('petal_length'))
     petal_width = float(request.form.get('petal_width'))
 
-    prediction = iris_model.predict([np.array([sepal_length, sepal_width, petal_length, petal_width])])[0]
+    model_name = request.form.get('action')
 
-    probabilities = iris_model.predict_proba([np.array([sepal_length, sepal_width, petal_length, petal_width])])[0]
+    if(model_name == "Random Forest"):
+        prediction = RandomForest_model.predict([np.array([sepal_length, sepal_width, petal_length, petal_width])])[0]
+        probabilities = RandomForest_model.predict_proba([np.array([sepal_length, sepal_width, petal_length, petal_width])])[0]
+    elif(model_name == "Logistic Regression"):
+        prediction = Logistic_model.predict([np.array([sepal_length, sepal_width, petal_length, petal_width])])[0]
+        probabilities = Logistic_model.predict_proba([np.array([sepal_length, sepal_width, petal_length, petal_width])])[0]
+    else:
+        prediction = KNeighbours_model.predict([np.array([sepal_length, sepal_width, petal_length, petal_width])])[0]
+        probabilities = KNeighbours_model.predict_proba([np.array([sepal_length, sepal_width, petal_length, petal_width])])[0]
+
     
-    return render_template("result.html", prediction = prediction, setosa = probabilities[0], versicolor = probabilities[1], virginica = probabilities[2])
+
+   
+    
+    return render_template("result.html", prediction = prediction, setosa = np.round(probabilities[0], 4), 
+                           versicolor = np.round(probabilities[1], 4), virginica = np.round(probabilities[2], 4))
 
 @app.route("/predict", methods=["GET"])
 def predict_page():
