@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Base image with Python
 FROM python:3.11-slim
 
@@ -18,3 +19,28 @@ EXPOSE 5000
 
 # Run the application
 CMD ["python", "start.py"]
+=======
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 5001
+
+CMD ["python", "start.py"]
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 35a5a1b (port consistency maintained)
