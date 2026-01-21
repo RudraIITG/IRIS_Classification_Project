@@ -1,16 +1,36 @@
 from flask import Flask, render_template, request
 import numpy as np
 import joblib
+from functools import lru_cache
+import logging
 
 app = Flask(__name__)
 
 MODELS = {
-    "Random Forest": joblib.load("RandomForest_pipeline.joblib"),
-    "Logistic Regression": joblib.load("Logistic_pipeline.joblib"),
-    "KNN": joblib.load("KNeighbours_pipeline.joblib"),
+    "Random Forest":"RandomForest_pipeline.joblib",
+    "Logistic Regression":"Logistic_pipeline.joblib",
+    "K Nearest Neighbours": "KNeighbours_pipeline.joblib"
 }
 
-DEFAULT_MODEL_KEY = "KNN"
+logger = logging.getLogger("ML Models")
+logger.setLevel(level=logging.INFO)
+
+fileHandler  =logging.FileHandler("Model_logs.txt")
+fileHandler.setLevel(logging.INFO)
+
+formatter = logging.Formatter(fmt= "%(asctime)s | %(levelname)s | %(message)s")
+fileHandler.setFormatter(formatter)
+
+logger.addHandler(fileHandler)
+logger.propagate = False
+
+
+
+@lru_cache(maxsize=None)
+def get_model(model_name):
+    logger.info(msg="{} model is getting loaded".format(model_name))
+    return joblib.load(MODELS.get(model_name))
+
 
 @app.route("/")
 def index():
@@ -31,7 +51,14 @@ def predict():
     ]], dtype=np.float32)
 
     model_key = request.form.get("action")
-    model = MODELS.get(model_key, MODELS[DEFAULT_MODEL_KEY])
+    model  = get_model(model_key)
+    if(model is None):
+        logger.warning(msg="{} model could not load".format(model_key))
+    else:
+        if(get_model.cache_info().hits  == 0):
+            logger.info(msg="{} model is loaded from disk".format(model_key))
+        else:
+            logger.info("{} model is loaded from the Cache".format(model_key))
 
     prediction = model.predict(x)[0]
     probabilities = model.predict_proba(x)[0]

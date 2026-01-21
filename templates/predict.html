@@ -6,6 +6,7 @@
     <title>Iris Species Prediction</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Body styling */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -17,93 +18,134 @@
             background: linear-gradient(to right, #6a11cb, #2575fc);
         }
 
+        /* Card container */
         .card {
             background: rgba(0,0,0,0.3);
-            padding: 40px;
+            padding: 30px;
             border-radius: 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
             text-align: center;
             width: 90%;
             max-width: 500px;
+            margin: auto;
         }
 
+        /* Heading */
         h1 {
             color: #fff;
-            font-size: 2.5em;
-            margin-bottom: 30px;
+            font-size: 2em;
+            margin-bottom: 25px;
             text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-        }
-
-        label {
-            font-size: 1.1em;
-            margin-bottom: 5px;
-            color: #fff;
-        }
-
-        input[type="number"] {
+        /* Form inputs */
+        form input[type="number"] {
+            width: 100%;
             padding: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             border-radius: 10px;
             border: none;
             font-size: 1em;
         }
 
-        input[type="submit"] {
-            background: #ffde59;
-            color: #1a1a1a;
+        /* Buttons row */
+        .btn-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* Model buttons */
+        .btn-row button {
+            flex: 1 1 30%;
+            min-width: 120px;
+            padding: 12px;
+            font-size: 1em;
             font-weight: bold;
-            font-size: 1.2em;
-            padding: 15px;
             border-radius: 50px;
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background: #ffde59;
+            color: #1a1a1a;
         }
 
-        input[type="submit"]:hover {
+        .btn-row button:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.4);
         }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 2em; }
-            input[type="submit"] { padding: 12px; font-size: 1em; }
+        /* Home button */
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 50px;
+            border: none;
+            background: #ffffff55;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .home-btn:hover {
+            background: #ffffff88;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        label {
+        font-size: 1.1em;
+        margin-bottom: 5px;
+        color: #ffde59; /* bright yellow for contrast */
+        display: block; /* ensures margin-bottom works */
+        }
+
+
+        /* Responsive tweaks */
+        @media (max-width: 480px) {
+            .btn-row {
+                flex-direction: column;
+            }
+            .btn-row button {
+                width: 100%;
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="card">
-  <h1>Enter Iris Details</h1>
+    <h1>Enter Iris Details</h1>
 
-  <form action="/predict" method="POST">
-    <label>Sepal Length:</label>
-    <input type="number" step="0.1" name="sepal_length" required>
+    <form action="/predict" method="POST">
+        <label >Sepal Length:</label>
+        <input type="number" step="0.1" name="sepal_length" required>
 
-    <label>Sepal Width:</label>
-    <input type="number" step="0.1" name="sepal_width" required>
+        <label>Sepal Width:</label>
+        <input type="number" step="0.1" name="sepal_width" required>
 
-    <label>Petal Length:</label>
-    <input type="number" step="0.1" name="petal_length" required>
+        <label>Petal Length:</label>
+        <input type="number" step="0.1" name="petal_length" required>
 
-    <label>Petal Width:</label>
-    <input type="number" step="0.1" name="petal_width" required>
+        <label>Petal Width:</label>
+        <input type="number" step="0.1" name="petal_width" required>
 
-    <div class="btn-row">
-      <button type="submit" name="action" value="Random Forest">Random Forest</button>
-      <button type="submit"  name="action" value = "Logistic Regression">Logistic Regression</button>
-      <button type="submit"  name="action" value="K Nearest Neighbours">K Nearest Neighbours</button>
+        <div class="btn-row">
+            <button type="submit" name="action" value="Random Forest">Random Forest</button>
+            <button type="submit" name="action" value="Logistic Regression">Logistic Regression</button>
+            <button type="submit" name="action" value="K Nearest Neighbours">K Nearest Neighbours</button>
+        </div>
 
-      <a href="/" class="btn">Home</a>
-    </div>
-  </form>
+        <a href="/" class="home-btn">Home</a>
+    </form>
 </div>
 
 </body>

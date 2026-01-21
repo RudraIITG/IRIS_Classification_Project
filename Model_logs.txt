@@ -1,0 +1,7 @@
+2026-01-17 00:37:47,250 | INFO | Logistic Regression model is getting loaded
+2026-01-17 00:37:48,140 | INFO | Logistic Regression model is getting loaded
+2026-01-17 00:37:48,825 | INFO | Logistic Regression model is loaded from disk
+2026-01-17 00:37:48,827 | INFO | Logistic Regression model is loaded from disk
+2026-01-17 00:38:05,316 | INFO | Logistic Regression model is loaded from the Cache
+2026-01-17 00:38:06,195 | INFO | Logistic Regression model is loaded from the Cache
+2026-01-17 00:38:07,209 | INFO | Logistic Regression model is loaded from the Cache

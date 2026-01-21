@@ -1,0 +1,55 @@
+2026-01-14 23:55:51,442 | WARNING | _internal.py:96 |  * Debugger is active!
+2026-01-14 23:55:51,442 | INFO | _internal.py:96 |  * Debugger PIN: 137-992-367
+2026-01-14 23:56:04,003 | INFO | _internal.py:96 | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.13:5000
+2026-01-14 23:56:04,004 | INFO | _internal.py:96 | [33mPress CTRL+C to quit[0m
+2026-01-14 23:56:04,004 | INFO | _internal.py:96 |  * Restarting with watchdog (windowsapi)
+2026-01-14 23:56:04,400 | WARNING | _internal.py:96 |  * Debugger is active!
+2026-01-14 23:56:04,400 | INFO | _internal.py:96 |  * Debugger PIN: 137-992-367
+2026-01-14 23:56:59,472 | INFO | _internal.py:96 | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.13:5000
+2026-01-14 23:56:59,472 | INFO | _internal.py:96 | [33mPress CTRL+C to quit[0m
+2026-01-14 23:56:59,479 | INFO | _internal.py:96 |  * Restarting with watchdog (windowsapi)
+2026-01-14 23:56:59,863 | WARNING | _internal.py:96 |  * Debugger is active!
+2026-01-14 23:56:59,873 | INFO | _internal.py:96 |  * Debugger PIN: 137-992-367
+2026-01-14 23:57:17,390 | INFO | start.py:23 | Logistic Regression model is getting loaded
+2026-01-14 23:57:17,410 | INFO | _internal.py:96 |  * Detected change in 'C:\\Users\\bandy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\sklearn\\base.py', reloading
+2026-01-14 23:57:17,414 | INFO | _internal.py:96 |  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\timeit.py', reloading
+2026-01-14 23:57:17,437 | INFO | _internal.py:96 |  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\glob.py', reloading
+2026-01-14 23:57:17,777 | INFO | _internal.py:96 |  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\unittest\\__init__.py', reloading
+2026-01-14 23:57:17,778 | INFO | _internal.py:96 |  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\unittest\\result.py', reloading
+2026-01-14 23:57:17,779 | INFO | _internal.py:96 |  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\unittest\\util.py', reloading
+2026-01-14 23:57:17,781 | INFO | _internal.py:96 |  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\unittest\\case.py', reloading
+2026-01-14 23:57:17,786 | INFO | _internal.py:96 |  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\unittest\\suite.py', reloading
+2026-01-14 23:57:17,789 | INFO | _internal.py:96 |  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\unittest\\loader.py', reloading
+2026-01-14 23:57:17,793 | INFO | _internal.py:96 |  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\unittest\\main.py', reloading
+2026-01-14 23:57:17,797 | INFO | _internal.py:96 |  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\argparse.py', reloading
+2026-01-14 23:57:17,803 | INFO | _internal.py:96 |  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\unittest\\runner.py', reloading
+2026-01-14 23:57:17,806 | INFO | _internal.py:96 |  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\unittest\\signals.py', reloading
+2026-01-14 23:57:18,286 | INFO | _internal.py:96 |  * Restarting with watchdog (windowsapi)
+2026-01-14 23:57:18,983 | WARNING | _internal.py:96 |  * Debugger is active!
+2026-01-14 23:57:18,995 | INFO | _internal.py:96 |  * Debugger PIN: 137-992-367
+2026-01-14 23:58:24,956 | INFO | _internal.py:96 | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.13:5000
+2026-01-14 23:58:24,956 | INFO | _internal.py:96 | [33mPress CTRL+C to quit[0m
+2026-01-14 23:58:24,956 | INFO | _internal.py:96 |  * Restarting with watchdog (windowsapi)
+2026-01-14 23:58:25,346 | WARNING | _internal.py:96 |  * Debugger is active!
+2026-01-14 23:58:25,348 | INFO | _internal.py:96 |  * Debugger PIN: 137-992-367
+2026-01-14 23:59:50,832 | INFO | _internal.py:96 |  * Detected change in 'C:\\Users\\bandy\\Desktop\\Lap1\\Machine Learning\\IRIS_Classification\\start.py', reloading
+2026-01-14 23:59:50,832 | INFO | _internal.py:96 |  * Detected change in 'C:\\Users\\bandy\\Desktop\\Lap1\\Machine Learning\\IRIS_Classification\\start.py', reloading
+2026-01-14 23:59:50,832 | INFO | _internal.py:96 |  * Detected change in 'C:\\Users\\bandy\\Desktop\\Lap1\\Machine Learning\\IRIS_Classification\\start.py', reloading
+2026-01-14 23:59:51,314 | INFO | _internal.py:96 |  * Restarting with watchdog (windowsapi)
+2026-01-15 00:00:26,592 | INFO | _internal.py:96 | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-15 00:00:26,594 | INFO | _internal.py:96 | [33mPress CTRL+C to quit[0m
+2026-01-15 00:00:54,768 | INFO | start.py:23 | Logistic Regression model is getting loaded
+2026-01-15 00:00:57,065 | INFO | _internal.py:96 | 127.0.0.1 - - [15/Jan/2026 00:00:57] "POST /predict HTTP/1.1" 200 -
+2026-01-15 00:01:10,048 | INFO | _internal.py:96 | 127.0.0.1 - - [15/Jan/2026 00:01:10] "POST /predict HTTP/1.1" 200 -
+2026-01-15 00:01:11,408 | INFO | _internal.py:96 | 127.0.0.1 - - [15/Jan/2026 00:01:11] "POST /predict HTTP/1.1" 200 -
+2026-01-15 00:01:12,263 | INFO | _internal.py:96 | 127.0.0.1 - - [15/Jan/2026 00:01:12] "POST /predict HTTP/1.1" 200 -
